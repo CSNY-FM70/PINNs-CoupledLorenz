@@ -30,6 +30,12 @@ Approximated solution by PINN.
 ![PINN(6x128) Solution Accuracy - Driver(b) & Response(r)](/CoupledLorenz/General_Plots/CLI_T256x128.png)
 
 Heatmaps depicting PINNs limitations for chaotic systems highlighting the importance of measurement data in the
-optimization task.
-![PINN(6x128) Solution Accuracy - Driver(b) & Response(r)](/CoupledLorenz/General_Plots/CLI_T256x128.png)
+optimization task. Image below shows weight ditribution in the loss functional of the respective term.
+
+Boundary v. Measurement |  Residual v. Measurement
+:----------------------:|:-------------------------:
+![OptErr - InitxData](/Plots/OptError_Mean_OptError_InitialBoundaryXData.png)
+|  ![OptErr - ResxData](/Plots/OptError_Mean_OptError_ResidualXData.png)
+
+
 
