@@ -11,8 +11,8 @@ under deterministic chaos at varying spatio-temporal scales. The study focuses o
 the chosen netwrok architecture ($\epsilon_{app}$), the observed data information content and quantity ($\epsilon_{data}$)
 and the complexity of the loss-functional to be optimized ($\epsilon_{opt}$).
 
-$$ \frac{dx_1}{dt} = \sigma(y_1-x_1)
-    \frac{dy_1}{dt} = x_1(\rho-z_1) -y_1
+$$ \frac{dx_1}{dt} = \sigma(y_1-x_1) \\
+    \frac{dy_1}{dt} = x_1(\rho-z_1) -y_1 \\
     \frac{dz_1}{dt} = x_1 y_1 - \beta z_1 $$
 
 ![PINNs](/Plots/error_analysis.PNG)
