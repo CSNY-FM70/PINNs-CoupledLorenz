@@ -11,13 +11,25 @@ under deterministic chaos at varying spatio-temporal scales. The study focuses o
 the chosen netwrok architecture ($\epsilon_{app}$), the observed data information content and quantity ($\epsilon_{data}$)
 and the complexity of the loss-functional to be optimized ($\epsilon_{opt}$).
 
-$$\frac{dx_1}{dt} = \sigma_d(y_1-x_1) \quad \frac{dx_2}{dt} = \sigma_r(y_2-x_2) + \mu_1 f_1(u(t))$$
-
-$$\frac{dy_1}{dt} = x_1(\rho_d-z_1) -y_1 \quad \frac{dy_2}{dt} = x_2(\rho_r - z_2) - y_2 + \mu_2 f_2(u(t))$$
-
-$$\frac{dz_1}{dt} = x_1 y_1 - \beta_d z_1 \quad \frac{dz_2}{dt} = x_2 y_2 - \beta_r z_2 + \mu_3 f_3(u(t))$$
-
 ![PINNs](/Plots/error_analysis.PNG)
 
+Driver and response system, where u(t) represents the solution to the driver system (left). The network learning task
+consist of inferring all nine system parameters $\sigma_i$, $\rho_i$, $\beta_i$ and $\mu_i$ by minimizing the L2-norm
+between measuremnt and approximation as well as residual given by governing equations.
+
+$$\frac{dx_1}{dt} = \sigma_d(y_1-x_1) \quad \quad\frac{dx_2}{dt} = \sigma_r(y_2-x_2) + \mu_1 f_1(u(t))$$
+
+$$\frac{dy_1}{dt} = x_1(\rho_d-z_1) -y_1 \quad \quad\frac{dy_2}{dt} = x_2(\rho_r - z_2) - y_2 + \mu_2 f_2(u(t))$$
+
+$$\frac{dz_1}{dt} = x_1 y_1 - \beta_d z_1 \quad \quad\frac{dz_2}{dt} = x_2 y_2 - \beta_r z_2 + \mu_3 f_3(u(t))$$
+
+Reference Solution for synthetic data - without noise. Driver(b)|Reponse(r)
 ![Reference System - Driver(b) & Response(r)](/CoupledLorenz/General_Plots/Coupled_System_Sol.png)
+
+Approximated solution by PINN.
 ![PINN(6x128) Solution Accuracy - Driver(b) & Response(r)](/CoupledLorenz/General_Plots/CLI_T256x128.png)
+
+Heatmaps depicting PINNs limitations for chaotic systems highlighting the importance of measurement data in the
+optimization task.
+![PINN(6x128) Solution Accuracy - Driver(b) & Response(r)](/CoupledLorenz/General_Plots/CLI_T256x128.png)
+
