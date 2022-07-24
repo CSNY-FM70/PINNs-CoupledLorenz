@@ -24,12 +24,14 @@ $$\frac{dy_1}{dt} = x_1(\rho_d-z_1) -y_1 \quad \quad\frac{dy_2}{dt} = x_2(\rho_r
 $$\frac{dz_1}{dt} = x_1 y_1 - \beta_d z_1 \quad \quad\frac{dz_2}{dt} = x_2 y_2 - \beta_r z_2 + \mu_3 f_3(u(t))$$
 
 Reference Solution for synthetic data - without noise. Driver(b)|Reponse(r)
+
 ![Reference System - Driver(b) & Response(r)](/CoupledLorenz/General_Plots/Coupled_System_Sol.png)
 
 Approximated solution by PINN.
+
 ![PINN(6x128) Solution Accuracy - Driver(b) & Response(r)](/CoupledLorenz/General_Plots/CLI_T256x128.png)
 
-Heatmaps depicting PINNs limitations for chaotic systems highlighting the importance of measurement data in the
+Optimization Error - Heatmaps depicting PINNs limitations for chaotic systems highlighting the importance of measurement data in the
 optimization task. Image below shows weight ditribution in the loss functional of the respective term.
 
 Boundary v. Measurement |  Residual v. Measurement
