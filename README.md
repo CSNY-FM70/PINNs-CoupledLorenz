@@ -34,8 +34,7 @@ optimization task. Image below shows weight ditribution in the loss functional o
 
 Boundary v. Measurement |  Residual v. Measurement
 :----------------------:|:-------------------------:
-![OptErr - InitxData](/Plots/OptError_Mean_OptError_InitialBoundaryXData.png)
-|  ![OptErr - ResxData](/Plots/OptError_Mean_OptError_ResidualXData.png)
+![OptErr - InitxData](/Plots/OptError_Mean_OptError_InitialBoundaryXData.png)|  ![OptErr - ResxData](/Plots/OptError_Mean_OptError_ResidualXData.png)
 
 
 
